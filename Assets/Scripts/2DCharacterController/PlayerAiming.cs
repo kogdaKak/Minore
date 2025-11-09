@@ -31,7 +31,6 @@ public class PlayerAiming : MonoBehaviour
             var pos = initialLocalPos;
             pos.x = sprite.flipX ? -Mathf.Abs(pos.x) : Mathf.Abs(pos.x);
             firePoint.localPosition = pos;
-            Debug.Log(pos);
         }
     }
 
