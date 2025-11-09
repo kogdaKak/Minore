@@ -16,9 +16,9 @@ GameObject:
   - component: {fileID: 3067704026312271605}
   - component: {fileID: 5157336009478468886}
   - component: {fileID: 7489804125366159003}
-  - component: {fileID: 773467751571513174}
+  - component: {fileID: 1874842979420668886}
   m_Layer: 0
-  m_Name: Enemy
+  m_Name: EnemyFollower
   m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -223,7 +223,7 @@ MonoBehaviour:
   groundLayer:
     serializedVersion: 2
     m_Bits: 8
---- !u!114 &773467751571513174
+--- !u!114 &1874842979420668886
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -232,9 +232,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1840015159336283060}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 317513dbdd739bd488cd9ddc17eed5e5, type: 3}
+  m_Script: {fileID: 11500000, guid: d5979fdc96dc7824cbaf4b1853305055, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::EnemyBrain
+  m_EditorClassIdentifier: Assembly-CSharp::ChasingEnemyBrain
   movement: {fileID: 5157336009478468886}
   env: {fileID: 7489804125366159003}
   attack: {fileID: 989816431469806713}
@@ -243,6 +243,7 @@ MonoBehaviour:
   targetTags:
   - Player
   - Enemy
+  chaseRange: 5
 --- !u!1 &8726194257266914151
 GameObject:
   m_ObjectHideFlags: 0

@@ -21,8 +21,9 @@ public class EnemyBase : MonoBehaviour, IDamageable
     public void TakeDamage(float amount)
     {
         if (isDead) return;
-        currentHealth -= amount;
-        if (currentHealth <= 0) Die();
+            currentHealth -= amount;
+        if (currentHealth <= 0) 
+            Die();
     }
 
     protected virtual void Die()
@@ -30,6 +31,7 @@ public class EnemyBase : MonoBehaviour, IDamageable
         if (isDead) return;
         isDead = true;
 
+        PlayerStats.Instance.AddXP(xpReward);
         // событие для спавнера
         OnEnemyDied?.Invoke(this);
 
